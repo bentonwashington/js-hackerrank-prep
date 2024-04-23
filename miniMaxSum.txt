@@ -1,0 +1,19 @@
+function miniMaxSum(arr) {
+    // Write your code here
+    
+    //initialize variables
+    var sortedArr = arr.sort(function(a, b){return a-b});
+    var sum = 0;
+    
+    //find the sum of the array
+    for (let i = 0; i < arr.length; i++){
+        sum += sortedArr[i];
+    }
+    
+    //subtract the first and last element to find sums
+    var minSum = sum - sortedArr[arr.length - 1];
+    var maxSum = sum - sortedArr[0];
+    
+    //THANK YOU JESUS!
+    console.log(`${minSum} ${maxSum}`);
+}
