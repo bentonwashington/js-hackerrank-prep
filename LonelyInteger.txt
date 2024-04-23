@@ -1,0 +1,21 @@
+function lonelyinteger(a) {
+    // Write your code here
+    
+    //take each number from array
+    for (let i in a) {
+        //initialize variable to keep count
+        var count = 0;
+        
+        //compare the number to each one in array and keep count of how many times it appears
+        for (let j in a) {
+            if (a[i] == a[j]) {
+                count++;
+            }
+        }
+        //after the count has been taken, if count = 1 then its unique and that's our answer
+        if (count == 1) {
+            //JESUS IS LORD!
+            return a[i];
+        }
+    }
+}

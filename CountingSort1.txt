@@ -1,0 +1,24 @@
+function countingSort(arr) {
+    // Write your code here
+    
+    //initialize variable. will need to create an empty array to put results in
+    var emptyArr = [];
+    
+    //loop through numbers 0-99, resetting each count to 0
+    for (let i = 0; i < 100; i++) {
+        var count = 0;
+        
+        //find how many numbers of each you have in the array 
+        for (let j = 0; j < arr.length; j++) {
+            if (i == arr[j]) {
+                count++;
+            }
+        }
+        //push final count to empty array
+        emptyArr.push(count)
+    }
+    
+    //THANK YOU JESUS!!
+    return emptyArr;
+
+}

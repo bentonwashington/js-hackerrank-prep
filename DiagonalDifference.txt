@@ -1,0 +1,24 @@
+function diagonalDifference(arr) {
+    // Write your code here
+    
+    //initialize variables: keep count of sums, n is the length of the array and j is needed for second loop so it doesn't interfere with i
+    var n = arr.length
+    var sum1 = 0;
+    var sum2 = 0;
+    var j = n;
+    
+    //loop through array of arrays and get the first sum
+    for (let i = 0; i < n; i++) {
+    sum1 += arr[i][i];
+    }
+    
+    //loop through array of arrays again and get the second sum
+    for (let i = 0; i < n; i++) {
+        sum2 += arr[i][j-1];
+        j--;
+    }
+    
+    //ORDER MY STEPS IN YOUR WORD!!!
+    let answer = Math.abs(sum1 - sum2);
+    return answer;
+}
