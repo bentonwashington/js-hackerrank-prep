@@ -1,0 +1,23 @@
+function twoArrays(k, A, B) {
+    // Write your code here
+    
+    //need variable to know length of array
+    //put A from min to max (sort() does not work for min to max)
+    //put B from max to min
+    //Thought Process: min should fit with max all the way
+    let n = A.length
+    A.sort(function(a, b) {return a-b;})
+    B.sort(function(a, b) {return b-a;});
+
+
+//if any of the sums are less than k, it is NO
+    for (let i = 0; i < n; i++) {
+        if (A[i] + B[i] < k) {
+            return "NO"
+        }
+    }
+    return "YES"
+    
+    //THANK YOU FATHER. I WILL KEEP GOING
+
+}
