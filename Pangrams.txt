@@ -1,0 +1,23 @@
+function pangrams(s) {
+    // Write your code here
+    
+    //initialize variables; alphabet string, change string to all lowercase, keep count of letteers
+    var alphabet = `abcdefghijklmnopqrstuvwxyz`;
+    var lowerS = s.toLowerCase();
+    var letterCount = 0;
+    
+    //add 1 for every letter that's in the string
+    for (var i in alphabet){
+        if (lowerS.includes(alphabet[i])) {
+            letterCount += 1;
+        }
+    }
+    
+    //if 26, it's a pangram
+    //Thank you Jesus!
+    if (letterCount == 26) {
+        return `pangram`
+    } else {
+        return `not pangram`
+    }
+}
