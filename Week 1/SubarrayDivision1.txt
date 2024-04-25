@@ -1,0 +1,25 @@
+function birthday(s, d, m) {
+    // Write your code here
+    
+    //initialize variables; need to track the count
+    var count = 0;
+    
+    //take a number in array and begin contiguous segment
+    for (let i = 0; i < (s.length - (m - 1)) ; i++) {
+        var sum = s[i];
+        
+        //continue contiguous segment
+        for (let j = i + 1; j < i + m; j++) {
+          sum += s[j];
+        }
+        
+        //almost done;
+        //check to see if it matches the sum
+        if (sum == d){
+            count += 1
+          }
+    }
+    
+    //THANK YOU JESUS CHRIST!
+    return count
+}
