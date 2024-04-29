@@ -1,0 +1,19 @@
+function sockMerchant(n, ar) {
+    // Write your code here
+    
+    // initialize variables
+    // object for key-value pairs, totalPair number
+    var counts = {};
+    var totalPairs = 0;
+    
+    //count duplicates
+    ar.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+    //count pairs for each value then add it to the total
+    for (const [key, value] of Object.entries(counts)) {
+          var numberOfPairs = Math.floor(value / 2);
+          totalPairs += numberOfPairs
+    }
+    
+    //FATHER, SON, AND HOLY SPIRIT!!
+    return totalPairs
+}
